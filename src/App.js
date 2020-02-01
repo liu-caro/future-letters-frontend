@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Login from "./login";
-import Register from "./register";
+import LandingPage from "./components/landingpage";
+import Login from "./components/login";
+import Register from "./components/register"
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 class App extends React.Component {
