@@ -18,8 +18,8 @@
 import React from "react";
 
 // reactstrap components
-import {Container, Row, Col, Button, Jumbotron} from "reactstrap";
-import {Link} from "react-router-dom";
+import {Card, CardBody, CardTitle, Container, Row, Col, Button, Jumbotron} from "reactstrap";
+import {Link, Route} from "react-router-dom";
 import LogoBottle from "../images/LogoBottle.png";
 
 class LandingPage extends React.Component {
@@ -29,6 +29,8 @@ class LandingPage extends React.Component {
              <Jumbotron fluid>
                  <div className = "header bg-gradient-info pb-8 pt-5 pt-md-8">
                  <Container fluid>
+                 <Row className="mt-5">
+                <Col lg="6">
                       <h1 className="display-1">Future Letter</h1>
                       <img className="formatbottle" src={LogoBottle}></img>
                       <p className="lead">Hello there! Do you have something on your mind? Something that you want to vent of your system,
@@ -49,10 +51,14 @@ class LandingPage extends React.Component {
                                 </Col>
                                 <hr/>
                             </Row>
-                        </div>
-            
-                </Container>
-                </div>
+                        </div>    
+                 </Col>
+                 <Col lg="6">
+                     //PLACEHOLDER FOR TEXT ANIMAAAAAATIONNNNNN
+                 </Col>
+                 </Row>
+                 </Container>
+                 </div>
                  </Jumbotron>
             </>
             
