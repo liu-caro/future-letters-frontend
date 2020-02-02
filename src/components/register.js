@@ -39,7 +39,7 @@ class Register extends React.Component {
     render() {
         const {email, password, passwordConfirmation} = this.state;
         return (
-            <Container className="content">
+            <Container>
                 <Form className="form" onSubmit={this.handleSubmit}>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email Address</Form.Label>

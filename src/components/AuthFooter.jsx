@@ -44,26 +44,18 @@ class Login extends React.Component {
                 <Nav className="nav-footer justify-content-center justify-content-xl-end">
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com?ref=adr-auth-footer"
+                      href="https://github.com/nicoledanuwidjaja/future-letters-backend"
                       target="_blank"
                     >
-                      Future Letters
+                      GitHub
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adr-auth-footer"
+                      href="#"
                       target="_blank"
                     >
                       About Us
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="http://blog.creative-tim.com?ref=adr-auth-footer"
-                      target="_blank"
-                    >
-                      Blog
                     </NavLink>
                   </NavItem>
                 </Nav>

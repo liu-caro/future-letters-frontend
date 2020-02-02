@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Button} from "react-bootstrap";
+import {Container, Form, Button} from "react-bootstrap";
 import firebase from "../firebase";
 import '../css/general.css';
 
@@ -34,21 +34,23 @@ class Login extends React.Component {
     render() {
         const {email, password} = this.state;
         return (
-            <Form className="form" onSubmit={this.handleSubmit}>
-                <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email Address</Form.Label>
-                    <Form.Control type="email" placeholder="Email"
-                                  value={email} onChange={this.handleChange}/>
-                </Form.Group>
-                <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password"
-                                  value={password} onChange={this.handleChange}/>
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
+            <Container>
+                <Form className="form" onSubmit={this.handleSubmit}>
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Email Address</Form.Label>
+                        <Form.Control type="email" placeholder="Email"
+                                      value={email} onChange={this.handleChange}/>
+                    </Form.Group>
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Password"
+                                      value={password} onChange={this.handleChange}/>
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+            </Container>
         );
     }
 }

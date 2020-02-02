@@ -30,7 +30,7 @@ class LandingPage extends React.Component {
                         <div className="header-body">
                             {/* Card stats */}
                             <Row>
-                                <Col lg="12" xl="3">
+                                <Col lg="12">
                                     <Link to="login">
                                         <Button color="primary">Login
                                         </Button>
@@ -40,7 +40,8 @@ class LandingPage extends React.Component {
                                         </Button>
                                     </Link>
                                 </Col>
-                                <Col lg="6" xl="3">
+                                <hr/>
+                                <Col lg="6">
                                     <Card className="card-stats mb-4 mb-xl-0">
                                         <CardBody>
                                             <Row>
@@ -71,7 +72,7 @@ class LandingPage extends React.Component {
                                         </CardBody>
                                     </Card>
                                 </Col>
-                                <Col lg="6" xl="3">
+                                <Col lg="6">
                                     <Card className="card-stats mb-4 mb-xl-0">
                                         <CardBody>
                                             <Row>
