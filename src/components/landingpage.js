@@ -12,7 +12,8 @@ import {
   EmptyStateVariant,
   EmptyStateIcon,
   EmptyStateBody,
-  EmptyStateSecondaryActions
+  EmptyStateSecondaryActions,
+  TextContent
 } from '@patternfly/react-core';
 import { Card, CardHead, CardActions, CardHeader, CardBody, CardFooter, Dropdown, DropdownToggle, DropdownItem, DropdownSeparator, DropdownPosition, DropdownDirection, KebabToggle, } from '@patternfly/react-core';  
 
@@ -82,10 +83,17 @@ class LandingPage extends React.Component {
             />
           </CardActions>
         </CardHead>
-        <CardHeader>Header</CardHeader>
+        <CardHeader>
+          Futurememe
+          </CardHeader>
         <CardBody>Body</CardBody>
         <CardFooter>Footer</CardFooter>
-      </Card>
+        <EmptyState>
+        <TextContent>
+          Description blah blah
+        </TextContent>
+      </EmptyState>
+      </Card> 
     );
   }
 }
