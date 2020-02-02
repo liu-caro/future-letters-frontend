@@ -13,7 +13,8 @@ class Letters extends React.Component {
 
     render() {
         return (
-            <Container className="letter-container">
+            <div className="bg-gradient-info">
+            <Container className="letter-container bg-gradient-white">
             <Accordion defaultActiveKey="0">
             <Card className="letter-card">
                 <Card.Body>
@@ -37,6 +38,7 @@ class Letters extends React.Component {
             </Card>
             </Accordion>
             </Container>
+            </div>
         );
     }
 }
