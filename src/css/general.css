@@ -26,12 +26,12 @@ title {
 }
 
 .letter-area {
-    width: 700px;
-    height: 692px;
+    width: 50%;
+    height: 80%;
     position: absolute;
     background-color:white;
     z-index: 1;
-    left: 650px;
+    right: 100px;
     top: 100px;
 }
 
