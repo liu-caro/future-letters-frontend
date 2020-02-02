@@ -18,7 +18,7 @@
 import React from "react";
 
 // reactstrap components
-import {Card, CardBody, CardTitle, Container, Row, Col, Button, Jumbotron} from "reactstrap";
+import {Container, Row, Col, Button, Jumbotron} from "reactstrap";
 import {Link} from "react-router-dom";
 import LogoBottle from "../images/LogoBottle.png";
 

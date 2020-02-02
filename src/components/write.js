@@ -31,7 +31,7 @@ class Write extends React.Component {
 
         fetch('http://localhost:9000/letter/create', {
             method: 'POST',
-            body: data
+            // body: data
         }).then(response => {
             response.json().then(body => {
                 this.setState({ header, body, timeDelivered});
