@@ -1,8 +1,4 @@
-
-
-
-import React from 'react'; 
-
+import React from 'react';
 
 import {
   PageSection,
@@ -14,7 +10,8 @@ import {
   EmptyStateBody,
   EmptyStateSecondaryActions
 } from '@patternfly/react-core';
-import { Card, CardHead, CardActions, CardHeader, CardBody, CardFooter, Dropdown, DropdownToggle, DropdownItem, DropdownSeparator, DropdownPosition, DropdownDirection, KebabToggle, } from '@patternfly/react-core';  
+
+import { Card, CardHead, CardActions, CardHeader, CardBody, CardFooter, Dropdown, DropdownToggle, DropdownItem, DropdownSeparator, DropdownPosition, DropdownDirection, KebabToggle, } from '@patternfly/react-core';
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -34,11 +31,11 @@ class LandingPage extends React.Component {
       });
     };
     this.onClick = (checked, event) => {
-      const target = event.target; 
-      const value = target.type === 'checkbox' ? target.checked : target.value; 
-      const name = target.name; 
-      this.setState({ [name]: value }); 
-    }; 
+      const target = event.target;
+      const value = target.type === 'checkbox' ? target.checked : target.value;
+      const name = target.name;
+      this.setState({ [name]: value });
+    };
   }
 
   render() {
@@ -73,7 +70,7 @@ class LandingPage extends React.Component {
               position={'right'}
             />
             <input
-              type="checkbox" 
+              type="checkbox"
               isChecked={this.state.check1}
               onChange={this.onClick}
               aria-label="card checkbox example"
