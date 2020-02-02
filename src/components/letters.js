@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/general.css';
-import {Card, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Card, Button, Accordion, AccordionCollapse, AccordianToggle, ListGroupItem} from 'react-bootstrap';
 
 class Letters extends React.Component {
     constructor(props) {
@@ -13,24 +13,25 @@ class Letters extends React.Component {
 
     render() {
         return (
+            <Accordion defaultActiveKey="0">
             <Card className="letter-card">
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
+                    <Card.Title className="display-2"> My letters</Card.Title>
                 </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <ListGroupItem>Cras justo odio</ListGroupItem>
-                    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                    <ListGroupItem>Vestibulum at eros</ListGroupItem>
-                </ListGroup>
-                <Card.Body>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
+                <Accordion.Toggle as={Card.Header} eventKey="0">
+                    Letter numero uno
+                    </Accordion.Toggle>
+                     <Accordion.Collapse eventKey="0">
+                          <Card.Body>Related letter 1</Card.Body>
+                           </Accordion.Collapse>
+                           <Accordion.Toggle as={Card.Header} eventKey="1">
+                    Letter numero dos
+                    </Accordion.Toggle>
+                     <Accordion.Collapse eventKey="1">
+                          <Card.Body>Related letter 1</Card.Body>
+                           </Accordion.Collapse>
             </Card>
+            </Accordion>
         );
     }
 }
