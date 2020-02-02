@@ -32,12 +32,7 @@ class Letters extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const {header, body, timeCreated, timeDelivered,} = this.state;
-        firebase.firestore().ref('/').push({header, body, timeCreated, timeDelivered}).then(() => {
-
-        }).catch((error) => {
-                this.setState({error: error});
-            }
-        );
+        // connect with backend
     };
 
     render() {
@@ -47,7 +42,7 @@ class Letters extends React.Component {
                 <Form className="form" onSubmit={this.handleSubmit}>
                     <Form.Group controlId="letterDate">
                         <Form.Label>Send Date</Form.Label>
-                        <DatePicker selected={timeDelivered} onChange={this.handleDate} />
+                        <DatePicker selected={timeDelivered} onChange={this.handleDate}/>
                     </Form.Group>
                     <Form.Group controlId="letterHeader">
                         <Form.Label>Title</Form.Label>
@@ -61,10 +56,13 @@ class Letters extends React.Component {
                     </Form.Group>
                     <Button variant="danger" onClick={() => {
                         // connect to back end and run the algorithms
-
-                    }}>
+                        this.state.done = true;
+                        console.log(this.state.done);
+                    }
+                    }>
                         Done
                     </Button>
+
                     {this.state.done && <Tags/>}
 
                     <Button variant="secondary" type="submit">

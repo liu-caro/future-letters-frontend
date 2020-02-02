@@ -15,7 +15,7 @@ class Tags extends React.Component {
 
     render() {
         return (
-            <h1>Hi</h1>
+            <h1>This is supposed to show with tag options</h1>
         );
     }
 
