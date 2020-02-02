@@ -5,3 +5,13 @@
 title {
     font-size: 300pt;
 }
+
+.card-letter {
+    width: 50rem;
+    text-align: center;
+}
+
+.letter-body {
+    min-height: 20rem;
+    min-width: 25rem;
+}

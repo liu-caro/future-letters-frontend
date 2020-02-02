@@ -3,6 +3,7 @@ import './App.css';
 import AdminNavbar from "./components/AdminNavbar";
 import Header from "./components/Header";
 import AuthFooter from "./components/AuthFooter";
+import Write from "./components/write";
 import Letters from "./components/letters";
 import LandingPage from "./components/landingpage";
 import Login from "./components/login";
@@ -18,7 +19,8 @@ class App extends React.Component {
             <BrowserRouter>
                 <AdminNavbar/>
                 <Switch>
-                    <Route exact path="/write" component={Letters}></Route>
+                    <Route exact path="/my-letters" component={Letters}></Route>
+                    <Route exact path="/write" component={Write}></Route>
                     <Route exact path='/' component={LandingPage}></Route>
                     <Route exact path='/login' component={Login}></Route>
                     <Route exact path='/register' component={Register}></Route>
