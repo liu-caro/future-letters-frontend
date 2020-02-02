@@ -10,6 +10,7 @@ import Login from "./components/login";
 import Register from "./components/register";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/argon-dashboard-react.css';
+import NewNavbar from "./components/NewNavbar";
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
@@ -17,7 +18,7 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <AdminNavbar/>
+                <NewNavbar/>
                 <Switch>
                     <Route exact path="/my-letters" component={Letters}></Route>
                     <Route exact path="/write" component={Write}></Route>
