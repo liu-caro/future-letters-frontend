@@ -1,14 +1,36 @@
 import React from "react";
 import '../css/general.css';
-import {Card, Container, Button, Accordion, AccordionCollapse, AccordianToggle, ListGroupItem} from 'react-bootstrap';
+import {Card, Container, Button, Accordion, AccordionCollapse, AccordionToggle, ListGroupItem} from 'react-bootstrap';
 
 class Letters extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            userId: 'dummy%40@email.com',
             letters: [],
-            replyLetters: []
+            receivedLetters: []
         }
+    }
+
+    componentDidMount() {
+        const {userId} = this.state;
+        fetch('http://localhost:9000/:' + userId + '/get/letter', {
+            method: 'GET',
+        }).then(response => {
+            response.json().then(body => {
+                this.setState({letters: body});
+                console.log(response);
+            });
+        });
+
+        fetch('http://localhost:9000/:' + userId + '/get/receivedLetters', {
+            method: 'GET',
+        }).then(response => {
+            response.json().then(body => {
+                this.setState({receivedLetters: body});
+                console.log(response);
+            });
+        });
     }
 
     render() {
