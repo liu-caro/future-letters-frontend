@@ -45,7 +45,8 @@ class LandingPage extends React.Component {
                                 </Col>
                                 <hr/>
                             </Row>
-                        </div>    
+                        </div>
+                    <div className="letter-area"/>    
 
 
                  </Container>

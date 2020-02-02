@@ -15,3 +15,14 @@ title {
     min-height: 18rem;
     min-width: 40rem;
 }
+
+.letter-area {
+    width: 700px;
+    height: 692px;
+    position: absolute;
+    background-color:white;
+    z-index: 1;
+    left: 800px;
+    top: 100px;
+}
+
