@@ -27,7 +27,7 @@ class LandingPage extends React.Component {
         return (
             <>
              <Jumbotron fluid>
-                 <div className = "header bg-gradient-purple pb-8 pt-5 pt-md-8">
+                 <div className = "header bg-gradient-info pb-8 pt-5 pt-md-8">
                  <Container fluid>
                       <h1 className="display-1">MiraiMessage</h1>
                       <img className="formatbottle" src={BottleWhite}></img>
