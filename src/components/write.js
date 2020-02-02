@@ -62,9 +62,10 @@ class Write extends React.Component {
             "What is something you wish you changed about yourself?", "What makes you unique?", "Who do you care about?",
         ];
         return (
-            <div>
-                <Container>
-                    
+            <div className="bg-gradient-info">
+                <Container  className="bg-gradient-white">
+                <div className = "header  pt-1 pt-md-1">
+                    <h1 className="display-3">Write a letter to yourself!</h1>
                     <Form className="form" onSubmit={this.handleSubmit}>
                         <h1 className="display-3">Write a letter to yourself!</h1>
                         <Form.Group controlId="letterDate">
@@ -95,12 +96,13 @@ class Write extends React.Component {
                             <Form.Control className="letter-body" as="textarea" type="body" placeholder="What do you want to tell yourself?"
                                           value={body} onChange={this.handleChange}/>
                         </Form.Group>
-                        <Button variant="danger" onClick={() => {
+                        <Button variant="navy" onClick={() => {
                         }
                         }>
                             Done
                         </Button>
                     </Form>
+                    </div>
                 </Container>
             </div>
         );

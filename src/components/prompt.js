@@ -22,7 +22,7 @@ function Prompt(prompts) {
                 <Alert.Heading>{prompts[0]}</Alert.Heading>
                 <hr/>
                 <div className="d-flex justify-content-end">
-                    <Button size="sm" onClick={() => setShow(false)} variant="outline-success">
+                    <Button size="sm" onClick={() => setShow(false)} variant="outline-primary">
                         Hide
                     </Button>
                     <Button size="sm" onClick={() => generatePrompt(prompts)}>

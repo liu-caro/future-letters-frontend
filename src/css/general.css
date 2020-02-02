@@ -34,3 +34,7 @@ title {
     left: 800px;
     top: 100px;
 }
+
+.wide-container {
+    width: 100%;
+}

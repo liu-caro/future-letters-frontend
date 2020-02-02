@@ -25,7 +25,7 @@ class MainNavbar extends React.Component {
         >
           <Container fluid>
             <NavbarBrand tag={Link} to={'/'}>
-                Future Letters
+                MiraiMessage
             </NavbarBrand>
             <button
               aria-controls="navbar-primary"
