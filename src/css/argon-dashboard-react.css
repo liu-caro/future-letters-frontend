@@ -372,7 +372,9 @@ h6, .h6 {
   margin-top: 30px;
   margin-bottom: 1px;
   font-weight: 600;
-  line-height: 1.5; }
+  line-height: 1.5; 
+  margin-left: 0;
+}
 
 .display-4 {
   font-size: 1.6275rem;
@@ -9098,7 +9100,7 @@ button.section-darker:focus {
   background: linear-gradient(87deg, #2dce89 0, #2dcecc 100%) !important; }
 
 .bg-gradient-info {
-  background: linear-gradient(87deg, #11cdef 0, #1171ef 100%) !important; }
+  background: linear-gradient(87deg, #0d98b1 0, #0d5cc2 100%) !important; }
 
 .bg-gradient-warning {
   background: linear-gradient(87deg, #fb6340 0, #fbb140 100%) !important; }

@@ -1,9 +1,19 @@
 import React from 'react';
-import {Container, Form, Button, Col} from 'react-bootstrap';
+import {Container, Form, Button} from 'react-bootstrap';
+import {
+    FormGroup,
+    InputGroupAddon,
+    InputGroupText,
+    InputGroup,
+    Col,
+    Row
+  } from "reactstrap";
 import '../css/general.css';
 import Prompt from "./prompt";
 import Tags from "./tags";
 import DatePicker from "react-datepicker";
+import ReactDatetime from "react-datetime";
+import CalIcon from "../images/cal.png";
 
 class Write extends React.Component {
     constructor(props) {
@@ -52,23 +62,38 @@ class Write extends React.Component {
             "What is something you wish you changed about yourself?", "What makes you unique?", "Who do you care about?",
         ];
         return (
-            <div>
-                <Container>
+            <div className="bg-gradient-info">
+                <Container  className="bg-gradient-white">
+                <div className = "header  pt-1 pt-md-1">
                     <h1 className="display-3">Write a letter to yourself!</h1>
                     <Form className="form" onSubmit={this.handleSubmit}>
                         <Form.Group controlId="letterDate">
-                            <Form.Label className="display-4">Send Date</Form.Label>
-                            <DatePicker selected={timeDelivered} onChange={this.handleDate}/>
+                            <Form.Label>Send Date</Form.Label>
+                            <InputGroup className="input-group-alternative">
+                                <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                <img className="class-icon" src={CalIcon}></img>
+                                </InputGroupText>
+                                </InputGroupAddon>
+                                <ReactDatetime
+                                inputProps={{
+                                    placeholder: "Deliver to myself on"
+                                }}
+                                timeFormat={false}
+                                />
+                            </InputGroup>
+                            {/* <DatePicker selected={timeDelivered} onChange={this.handleDate}/> */}
                         </Form.Group>
+                        <Form.Label>Prompt</Form.Label>
                         <Prompt prompts={prompts}/>
                         <Form.Group controlId="letterHeader">
                             <Form.Label>Title</Form.Label>
-                            <Form.Control type="title" placeholder="Title"
+                            <Form.Control type="title" placeholder="Main idea of letter"
                                           value={header} onChange={this.handleChange}/>
                         </Form.Group>
                         <Form.Group controlId="letterBody">
                             <Form.Label>Body</Form.Label>
-                            <Form.Control className="letter-body" as="textarea" type="body" placeholder="Body"
+                            <Form.Control className="letter-body" as="textarea" type="body" placeholder="What do you want to tell yourself?"
                                           value={body} onChange={this.handleChange}/>
                         </Form.Group>
                         <Button variant="navy" onClick={() => {
@@ -77,6 +102,7 @@ class Write extends React.Component {
                             Done
                         </Button>
                     </Form>
+                    </div>
                 </Container>
             </div>
         );
