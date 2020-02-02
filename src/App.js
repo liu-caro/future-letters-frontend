@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import AdminNavbar from "./components/AdminNavbar";
 import Header from "./components/Header";
 import AuthFooter from "./components/AuthFooter";
 import Write from "./components/write";
@@ -10,7 +9,7 @@ import Login from "./components/login";
 import Register from "./components/register";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/argon-dashboard-react.css';
-import NewNavbar from "./components/NewNavbar";
+import MainNavbar from "./components/MainNavbar";
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
@@ -18,7 +17,7 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <NewNavbar/>
+                <MainNavbar/>
                 <Switch>
                     <Route exact path="/my-letters" component={Letters}></Route>
                     <Route exact path="/write" component={Write}></Route>
