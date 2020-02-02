@@ -67,7 +67,6 @@ class Write extends React.Component {
                 <div className = "header  pt-1 pt-md-1">
                     <h1 className="display-3">Write a letter to yourself!</h1>
                     <Form className="form" onSubmit={this.handleSubmit}>
-                        <h1 className="display-3">Write a letter to yourself!</h1>
                         <Form.Group controlId="letterDate">
                             <Form.Label>Send Date</Form.Label>
                             <InputGroup className="input-group-alternative">
@@ -85,6 +84,7 @@ class Write extends React.Component {
                             </InputGroup>
                             {/* <DatePicker selected={timeDelivered} onChange={this.handleDate}/> */}
                         </Form.Group>
+                        <Form.Label>Prompt</Form.Label>
                         <Prompt prompts={prompts}/>
                         <Form.Group controlId="letterHeader">
                             <Form.Label>Title</Form.Label>
