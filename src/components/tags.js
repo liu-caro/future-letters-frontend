@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Form, Button} from 'react-bootstrap';
-import '../general.css';
+import '../css/general.css';
 import firebase from "../firebase";
 
 class Tags extends React.Component {
@@ -9,6 +9,14 @@ class Tags extends React.Component {
         this.state = {
             tags: []
         };
+
+
+    }
+
+    render() {
+        return (
+            <h1>Hi</h1>
+        );
     }
 
 }

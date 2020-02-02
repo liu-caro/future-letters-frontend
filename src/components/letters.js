@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Form, Button} from 'react-bootstrap';
-import '../general.css';
+import '../css/general.css';
 import Tags from "./tags";
 import DatePicker from "react-datepicker";
 import firebase from "../firebase";
@@ -14,7 +14,7 @@ class Letters extends React.Component {
             replyLetters: [],
             tags: null,
             timeCreated: null,
-            timeDelivered: null,
+            timeDelivered: new Date(),
             done: false
         };
     }
@@ -23,10 +23,21 @@ class Letters extends React.Component {
         this.setState({[event.target.name]: event.target.value});
     };
 
+    handleDate = date => {
+        this.setState({
+            startDate: date
+        });
+    };
+
     handleSubmit = (event) => {
         event.preventDefault();
-        const {header, body, timeCreated, timeDelivered} = this.state;
+        const {header, body, timeCreated, timeDelivered,} = this.state;
+        firebase.firestore().ref('/').push({header, body, timeCreated, timeDelivered}).then(() => {
 
+        }).catch((error) => {
+                this.setState({error: error});
+            }
+        );
     };
 
     render() {
@@ -36,11 +47,7 @@ class Letters extends React.Component {
                 <Form className="form" onSubmit={this.handleSubmit}>
                     <Form.Group controlId="letterDate">
                         <Form.Label>Send Date</Form.Label>
-                        <DatePicker
-                            selected={this.state.date}
-                            onSelect={this.handleSelect} //when day is clicked
-                            onChange={this.handleChange} //only when value has changed
-                        />
+                        <DatePicker selected={timeDelivered} onChange={this.handleDate} />
                     </Form.Group>
                     <Form.Group controlId="letterHeader">
                         <Form.Label>Title</Form.Label>
@@ -52,13 +59,17 @@ class Letters extends React.Component {
                         <Form.Control as="textarea" type="body" placeholder="Body"
                                       value={body} onChange={this.handleChange}/>
                     </Form.Group>
-                    <Button variant="danger" type="submit" onClick={() => {
+                    <Button variant="danger" onClick={() => {
                         // connect to back end and run the algorithms
 
                     }}>
                         Done
                     </Button>
-                    {this.state.done && <Tags />}
+                    {this.state.done && <Tags/>}
+
+                    <Button variant="secondary" type="submit">
+                        Write
+                    </Button>
                 </Form>
             </Container>
         );

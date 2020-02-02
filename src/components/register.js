@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Form, Button} from 'react-bootstrap';
 import firebase from "../firebase";
-import '../general.css';
+import '../css/general.css';
 
 class Register extends React.Component {
     constructor(props) {
