@@ -11,6 +11,11 @@ title {
     text-align: center;
 }
 
+.class-icon {
+    opacity: 0.5;
+    max-height: 24px;
+}
+
 .letter-body {
     min-height: 18rem;
     min-width: 40rem;
@@ -21,12 +26,12 @@ title {
 }
 
 .letter-area {
-    width: 700px;
-    height: 692px;
+    width: 50%;
+    height: 80%;
     position: absolute;
     background-color:white;
     z-index: 1;
-    left: 800px;
+    right: 100px;
     top: 100px;
 }
 
