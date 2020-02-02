@@ -36,7 +36,7 @@ class Login extends React.Component {
                     href="https://www.creative-tim.com?ref=adr-auth-footer"
                     target="_blank"
                   >
-                    Future Letters
+                    MiraiMessage
                   </a>
                 </div>
               </Col>
