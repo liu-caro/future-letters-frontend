@@ -39,19 +39,22 @@ class Letters extends React.Component {
             <Accordion defaultActiveKey="0">
             <Card className="letter-card">
                 <Card.Body>
-                    <Card.Title className="display-2"> My letters</Card.Title>
+                    <Card.Title className="display-3"> My letters</Card.Title>
                 </Card.Body>
-                <Accordion.Toggle as={Card.Header} eventKey="0">
-                    Letter numero uno
-                    </Accordion.Toggle>
-                     <Accordion.Collapse eventKey="0">
-                          <Card.Body>Related letter 1</Card.Body>
-                           </Accordion.Collapse>
-                           <Accordion.Toggle as={Card.Header} eventKey="1">
-                    Letter numero dos
+                <Accordion.Toggle className="display-4" as={Card.Header} eventKey="1">
+                Incoming Letter, sent October 14, 2010
                     </Accordion.Toggle>
                      <Accordion.Collapse eventKey="1">
-                          <Card.Body>Related letter 1</Card.Body>
+                          <Card.Body>Today I found a ring: Sent from May 3, 2018</Card.Body>
+                           </Accordion.Collapse>
+                           <Accordion.Toggle className="display-4" as={Card.Header} eventKey="2">
+                               Dear Future Self: Delivered Jan 14, 2020
+                    </Accordion.Toggle>
+                     <Accordion.Collapse eventKey="2">
+                          <Card.Body>         Advice to my younger self: Delivered March 11, 2011</Card.Body>
+                           </Accordion.Collapse>
+                           <Accordion.Collapse eventKey="2">
+                          <Card.Body>          I hate high school!!!: Delivered April 1, 2010</Card.Body>
                            </Accordion.Collapse>
             </Card>
             </Accordion>

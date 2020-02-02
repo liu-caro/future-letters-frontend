@@ -71,7 +71,7 @@ class Write extends React.Component {
                             <Form.Control className="letter-body" as="textarea" type="body" placeholder="Body"
                                           value={body} onChange={this.handleChange}/>
                         </Form.Group>
-                        <Button variant="danger" onClick={() => {
+                        <Button variant="navy" onClick={() => {
                         }
                         }>
                             Done
