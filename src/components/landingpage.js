@@ -21,6 +21,7 @@ import React from "react";
 import {Card, CardBody, CardTitle, Container, Row, Col, Button, Jumbotron} from "reactstrap";
 import {Link, Route} from "react-router-dom";
 import LogoBottle from "../images/LogoBottle.png";
+import Typed from 'react-typed';
 
 class LandingPage extends React.Component {
     render() {
@@ -46,7 +47,28 @@ class LandingPage extends React.Component {
                                 <hr/>
                             </Row>
                         </div>
-                    <div className="letter-area"/>    
+                    <div className="letter-area">
+                        <div className="mt-5 ml-5">
+
+                        <h1 className="mb-4">
+                            Dear Future Me,
+                        </h1>
+                         <span className="mb-5">
+
+
+                        </span>   
+                        <Typed
+                            className="mt-5 ml-3"
+                            strings={[
+                                'I want you to know that I am proud of your progress', 
+                                'I want you to know that I love you',
+                                'I want you to know that it is ok to ask for help']}
+                                typeSpeed={40}
+                                backSpeed={50}
+                                loop >
+                        </Typed>
+                        </div>
+                    </div>    
 
 
                  </Container>
