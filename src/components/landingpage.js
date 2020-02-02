@@ -18,15 +18,18 @@
 import React from "react";
 
 // reactstrap components
-import {Card, CardBody, CardTitle, Container, Row, Col, Button} from "reactstrap";
+import {Card, CardBody, CardTitle, Container, Row, Col, Button, Jumbotron} from "reactstrap";
 import {Link} from "react-router-dom";
 
 class LandingPage extends React.Component {
     render() {
         return (
             <>
-                <div className="header bg-gradient-info pb-8 pt-5 pt-md-8">
-                    <Container fluid>
+             <Jumbotron fluid>
+                 <div className = "header bg-gradient-info pb-8 pt-5 pt-md-8">
+                 <Container fluid>
+                      <h1 className="display-1">Future Letter</h1>
+                      <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
                         <div className="header-body">
                             {/* Card stats */}
                             <Row>
@@ -105,9 +108,12 @@ class LandingPage extends React.Component {
                                 </Col>
                             </Row>
                         </div>
-                    </Container>
+            
+                </Container>
                 </div>
+                 </Jumbotron>
             </>
+            
         );
     }
 }
