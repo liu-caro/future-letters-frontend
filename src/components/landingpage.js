@@ -1,18 +1,17 @@
-import React from 'react';
-
+import '../general.css';
+import React from 'react'; 
 import {
-  PageSection,
   Title,
   Button,
   EmptyState,
-  EmptyStateVariant,
-  EmptyStateIcon,
   EmptyStateBody,
   EmptyStateSecondaryActions,
-  TextContent
+  Text,
+  TextVariants,
+  EmptyStatePrimary,
+  EmptyStateVariant
 } from '@patternfly/react-core';
-
-import { Card, CardHead, CardActions, CardHeader, CardBody, CardFooter, Dropdown, DropdownToggle, DropdownItem, DropdownSeparator, DropdownPosition, DropdownDirection, KebabToggle, } from '@patternfly/react-core';
+import { Dropdown, DropdownItem, DropdownSeparator, KebabToggle, } from '@patternfly/react-core';  
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -26,17 +25,17 @@ class LandingPage extends React.Component {
         isOpen
       });
     };
-    this.onSelect = event => {
+    this.onSelect = (event) => {
       this.setState({
         isOpen: !this.state.isOpen
       });
     };
     this.onClick = (checked, event) => {
-      const target = event.target;
-      const value = target.type === 'checkbox' ? target.checked : target.value;
-      const name = target.name;
-      this.setState({ [name]: value });
-    };
+      const target = event.target; 
+      const value = target.type === 'checkbox' ? target.checked : target.value; 
+      const name = target.name; 
+      this.setState({ [name]: value }); 
+    }; 
   }
 
   render() {
@@ -59,9 +58,21 @@ class LandingPage extends React.Component {
       </DropdownItem>
     ];
     return (
-      <Card>
-        <CardHead>
-          <CardActions>
+      <EmptyState variant = {EmptyStateVariant.full}>
+        < Title className="title-text" headingLevel="h5" size="lg">
+      FutureMeme
+    </Title>
+        <EmptyStateBody>
+            <Text Component = {TextVariants.p}>
+              Description~~
+            </Text>
+        </EmptyStateBody>
+        <EmptyStatePrimary>
+            <Button component="a" href="https://pf-next.com/" target="_blank" variant="primary">
+             write a letter
+            </Button>{' '}
+          </EmptyStatePrimary>
+          <EmptyStateSecondaryActions>
             <Dropdown
               onSelect={this.onSelect}
               toggle={<KebabToggle onToggle={this.onToggle} />}
@@ -71,26 +82,15 @@ class LandingPage extends React.Component {
               position={'right'}
             />
             <input
-              type="checkbox"
+              type="checkbox" 
               isChecked={this.state.check1}
               onChange={this.onClick}
               aria-label="card checkbox example"
               id="check-1"
               name="check1"
             />
-          </CardActions>
-        </CardHead>
-        <CardHeader>
-          Futurememe
-          </CardHeader>
-        <CardBody>Body</CardBody>
-        <CardFooter>Footer</CardFooter>
-        <EmptyState>
-        <TextContent>
-          Description blah blah
-        </TextContent>
-      </EmptyState>
-      </Card> 
+          </EmptyStateSecondaryActions>
+      </EmptyState> 
     );
   }
 }
