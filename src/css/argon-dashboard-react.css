@@ -85,7 +85,8 @@ body {
   outline: 0 !important; }
 
 .formatbottle {
-    max-height: 50px;
+    max-height: 200px;
+    margin-left: 2%;
     align-items: flex-end;
     flex-direction: row-reverse;
     color: antiquewhite; }
