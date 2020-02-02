@@ -54,10 +54,10 @@ class Write extends React.Component {
         return (
             <div>
                 <Container>
-                    <h1>Write a letter to yourself!</h1>
+                    <h1 className="display-3">Write a letter to yourself!</h1>
                     <Form className="form" onSubmit={this.handleSubmit}>
                         <Form.Group controlId="letterDate">
-                            <Form.Label>Send Date</Form.Label>
+                            <Form.Label className="display-4">Send Date</Form.Label>
                             <DatePicker selected={timeDelivered} onChange={this.handleDate}/>
                         </Form.Group>
                         <Prompt prompts={prompts}/>

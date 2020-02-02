@@ -15,3 +15,7 @@ title {
     min-height: 18rem;
     min-width: 40rem;
 }
+
+.letter-container {
+    min-height: 100vh;
+}

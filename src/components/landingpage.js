@@ -20,19 +20,19 @@ import React from "react";
 // reactstrap components
 import {Card, CardBody, CardTitle, Container, Row, Col, Button, Jumbotron} from "reactstrap";
 import {Link, Route} from "react-router-dom";
-import LogoBottle from "../images/LogoBottle.png";
+import BottleWhite from "../images/BottleWhite.png";
 
 class LandingPage extends React.Component {
     render() {
         return (
             <>
              <Jumbotron fluid>
-                 <div className = "header bg-gradient-info pb-8 pt-5 pt-md-8">
+                 <div className = "header bg-gradient-purple pb-8 pt-5 pt-md-8">
                  <Container fluid>
-                      <h1 className="display-1">Future Letter</h1>
-                      <img className="formatbottle" src={LogoBottle}></img>
+                      <h1 className="display-1">MiraiMessage</h1>
+                      <img className="formatbottle" src={BottleWhite}></img>
                       <p className="lead">Hello there! Do you have something on your mind? Something that you want to vent of your system,
-                      but no one to vent to? How about you write about it to your future self?
+                      but no one to vent to? Write a letter to your future self!
                       Pick a date to deliver it by, and you might just recieve a reply ;)</p>
                         <div className="header-body">
                             {/* Card stats */}

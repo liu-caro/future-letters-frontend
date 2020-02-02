@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/general.css';
-import {Card, Button, Accordion, AccordionCollapse, AccordianToggle, ListGroupItem} from 'react-bootstrap';
+import {Card, Container, Button, Accordion, AccordionCollapse, AccordianToggle, ListGroupItem} from 'react-bootstrap';
 
 class Letters extends React.Component {
     constructor(props) {
@@ -13,6 +13,7 @@ class Letters extends React.Component {
 
     render() {
         return (
+            <Container className="letter-container">
             <Accordion defaultActiveKey="0">
             <Card className="letter-card">
                 <Card.Body>
@@ -32,6 +33,7 @@ class Letters extends React.Component {
                            </Accordion.Collapse>
             </Card>
             </Accordion>
+            </Container>
         );
     }
 }
