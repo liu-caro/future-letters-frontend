@@ -27,9 +27,17 @@ class Write extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const {header, body} = this.state;
+        const {header, body, timeDelivered} = this.state;
 
-        // connect with backend
+        fetch('http://localhost:9000/letter/create', {
+            method: 'POST',
+            body: data
+        }).then(response => {
+            response.json().then(body => {
+                this.setState({ header, body, timeDelivered});
+                console.log(response);
+            });
+        });
     };
 
     render() {
