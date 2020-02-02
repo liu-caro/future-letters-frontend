@@ -1,8 +1,8 @@
 import React from 'react';
 import {Form, Button} from "react-bootstrap";
+import firebase from "../firebase";
 import '../general.css';
 
-const firebase = require("../firebase");
 
 class Login extends React.Component {
     constructor(props) {
