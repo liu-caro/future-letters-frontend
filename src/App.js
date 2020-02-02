@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from "./components/Header";
 import AuthFooter from "./components/AuthFooter";
 import Write from "./components/write";
 import Letters from "./components/letters";
