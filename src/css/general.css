@@ -16,6 +16,19 @@ title {
     min-width: 40rem;
 }
 
+<<<<<<< HEAD
 .letter-container {
     min-height: 100vh;
 }
+=======
+.letter-area {
+    width: 700px;
+    height: 692px;
+    position: absolute;
+    background-color:white;
+    z-index: 1;
+    left: 800px;
+    top: 100px;
+}
+
+>>>>>>> c059c4601af9cf3a4e6aadc80b51556d614220b6
