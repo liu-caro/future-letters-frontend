@@ -35,6 +35,7 @@ class Login extends React.Component {
         const {email, password} = this.state;
         return (
             <Container>
+                <h1>Login</h1>
                 <Form className="form" onSubmit={this.handleSubmit}>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email Address</Form.Label>
