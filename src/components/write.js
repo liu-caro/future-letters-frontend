@@ -4,14 +4,17 @@ import '../css/general.css';
 import Prompt from "./prompt";
 import Tags from "./tags";
 import DatePicker from "react-datepicker";
+import axios from "axios";
 
 class Write extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            header: null,
-            body: null,
-            timeDelivered: new Date()
+            body: "hi",
+            header: "hi",
+            tags: "hi",
+            timeCreated: new Date(),
+            timeDeliver: new Date()
         };
     }
 
@@ -27,21 +30,17 @@ class Write extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const {header, body, timeDelivered} = this.state;
-
-        fetch('http://localhost:9000/letter/create', {
-            method: 'POST',
-            body: data
+        const {body, header, tags, timeCreated, timeDeliver} = this.state;
+        axios.post('http://localhost:9000/letter/create', {
+            body: body, header: header, tags: tags, timeCreated: timeCreated, timeDeliver: timeDeliver
         }).then(response => {
-            response.json().then(body => {
-                this.setState({ header, body, timeDelivered});
-                console.log(response);
-            });
+            this.setState(response);
+            console.log(response);
         });
     };
 
     render() {
-        const {header, body, timeDelivered} = this.state;
+        const {header, body, timeDeliver} = this.state;
 
         // list of prompts
         const prompts = ["What are you thankful for today?", "Who do you wish you talked to more?",
@@ -58,22 +57,21 @@ class Write extends React.Component {
                     <Form className="form" onSubmit={this.handleSubmit}>
                         <Form.Group controlId="letterDate">
                             <Form.Label>Send Date</Form.Label>
-                            <DatePicker selected={timeDelivered} onChange={this.handleDate}/>
+                            <DatePicker selected={timeDeliver} onChange={this.handleDate}/>
                         </Form.Group>
                         <Prompt prompts={prompts}/>
                         <Form.Group controlId="letterHeader">
                             <Form.Label>Title</Form.Label>
-                            <Form.Control type="title" placeholder="Title"
+                            <Form.Control type="title" placeholder="Title" name="header"
                                           value={header} onChange={this.handleChange}/>
                         </Form.Group>
                         <Form.Group controlId="letterBody">
                             <Form.Label>Body</Form.Label>
-                            <Form.Control className="letter-body" as="textarea" type="body" placeholder="Body"
+                            <Form.Control className="letter-body" as="textarea" type="body" name="body"
+                                          placeholder="Body"
                                           value={body} onChange={this.handleChange}/>
                         </Form.Group>
-                        <Button variant="danger" onClick={() => {
-                        }
-                        }>
+                        <Button variant="danger" type="submit">
                             Done
                         </Button>
                     </Form>

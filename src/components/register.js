@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container, Form, Button} from 'react-bootstrap';
 import firebase from "../firebase";
+import axios from 'axios';
 import '../css/general.css';
 
 class Register extends React.Component {
@@ -32,6 +33,7 @@ class Register extends React.Component {
             .catch((error) => {
                 this.setState({errors: error});
             });
+
     };
 
     passwordIsValid = () => this.state.password === this.state.passwordConfirmation;

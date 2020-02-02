@@ -20,14 +20,24 @@ import React from "react";
 // reactstrap components
 import {Card, CardBody, CardTitle, Container, Row, Col, Button, Jumbotron} from "reactstrap";
 import {Link} from "react-router-dom";
+import axios from "axios";
+
+function depression() {
+    axios.get('http://localhost:9000/haha').then(res => {
+        const persons = res.data;
+        console.log(persons);
+    })
+}
 
 class LandingPage extends React.Component {
+
     render() {
         return (
             <>
              <Jumbotron fluid>
                  <div className = "header bg-gradient-info pb-8 pt-5 pt-md-8">
                  <Container fluid>
+                     <Button onClick={depression}></Button>
                       <h1 className="display-1">Future Letter</h1>
                       <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
                         <div className="header-body">
